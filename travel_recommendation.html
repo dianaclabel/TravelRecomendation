@@ -1,97 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trevel recommendation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="travel_recommendation.css">
+    <title>TravelBloom - Explore Dream Destinations</title>
 </head>
+
 <body>
-    <nav>
-        <div>
-            <img src="" alt="">
+    <nav class="nav">
+        <div class="box-image">
+            <img src="./images/logo_travel.png" alt="TravelBloom Logo" class="logo-img">
         </div>
-        <div>
-            <a href="">Home</a>
-            <a href="">About Us</a>
-            <a href="">Contact Us</a>
+        <div class="nav-links">
+            <a href="#" id="nav-home" class="nav-link active">Home</a>
+            <a href="#" id="nav-about" class="nav-link">About Us</a>
+            <a href="#" id="nav-contact" class="nav-link">Contact Us</a>
         </div>
-        <div>
-            <div>
-                <input type="text">
-                <img src="" alt="">
+        <div class="search_box">
+            <div class="search-input-wrapper">
+                <img src="./images/lupa.png" alt="Search Icon" class="search-icon-img">
+                <input type="text" id="search-input" placeholder="Enter a destination or keyword">
             </div>
-            <button>Search</button>
-            <button>Clear</button>
-        </div>  
+            <button id="btn-search">Search</button>
+            <button id="btn-clear">Clear</button>
+        </div>
     </nav>
 
-    <div class="home">
-        <div>
+    <div class="container">
+        <div class="social-media">
             <ul>
-                <li><a href="">Twiter</a></li>
-                <li><a href="">facebook</a></li>
-                <li><a href="">Instagram</a></li>
-                <li><a href="">Youtube</a></li>
+                <li><a href="#" aria-label="Twitter"><img src="./images/twiter.png" alt="Twitter"></a></li>
+                <li><a href="#" aria-label="Facebook"><img src="./images/facebook.png" alt="Facebook"></a></li>
+                <li><a href="#" aria-label="Instagram"><img src="./images/instagram.png" alt="Instagram"></a></li>
+                <li><a href="#" aria-label="YouTube"><img src="./images/youtube.png" alt="YouTube"></a></li>
             </ul>
         </div>
-        <div>
-            <h1>EXPLORE DREAM DESTINATION</h1>
-            <p>The Travel Recommendation App helps users explore popular travel destinations through an interactive and user-friendly interface. It allows users to search for beaches, temples, countries, or specific country names to view related cities along with images and descriptions. The app dynamically fetches data from a structured JSON file to display relevant results. It provides a simple and efficient way to discover and plan travel destinations.</p>
-            <button>Book Now</button>
-        </div>
-    </div>
 
-    <div class="About Us">
-        <h1>ABOUT US</h1>
-        <p>Welcome to Our Company! We are a team of passionate individuals dedicated to providing excellent services/products to our customers. Our mission is to provide the best experience for people traveling to different destinations around the world.
-            Our values include integrity, innovation, customer satisfaction, and teamwork. We believe in putting our customers first and working together to achieve our goals.
-            Feel free to explore our website to learn more about what we offer!</p>
-
-    </div>
-
-    <div class="our team">
-        <div>
-            <h1>Our Team</h1>
-        </div>
-        <div>
-            <div>
-                <img src="" alt="">
-                <h3>Jhon Doe</h3>
-                <p>John is responsible for overall company strategy and vision.</p>
-                <div>CEO</div>
+        <div class="container-main">
+            <!-- Home Section -->
+            <div id="section-home" class="main-section">
+                <div class="home">
+                    <h1>EXPLORE DREAM DESTINATION</h1>
+                    <p>The Travel Recommendation App helps users explore popular travel destinations through an interactive and user-friendly interface. It allows users to search for beaches, temples, countries, or specific country names to view related cities along with images and descriptions. The app dynamically fetches data from a structured JSON file to display relevant results. It provides a simple and efficient way to discover and plan travel destinations.</p>
+                    <button class="btn-book">Book Now</button>
+                </div>
             </div>
-            <div>
-                <img src="" alt="">
-                <h3>Jhon Doe</h3>
-                <p>John is responsible for overall company strategy and vision.</p>
-                <div>CEO</div>
-            </div>
-            <div>
-                <img src="" alt="">
-                <h3>Jhon Doe</h3>
-                <p>John is responsible for overall company strategy and vision.</p>
-                <div>CEO</div>
-            </div>
-        </div>
-       
 
-    </div>
-    <div class="contact">
-        <div>
-            <h1>CONTACT US</h1>
-            <p>Get in touch</p>
+            <!-- About Us Section -->
+            <div id="section-about" class="main-section hidden">
+                <div class="about-us">
+                    <h1>ABOUT US</h1>
+                    <p>Welcome to Our Company! We are a team of passionate individuals dedicated to providing excellent services/products to our customers. Our mission is to provide the best experience for people traveling to different destinations around the world. Our values include integrity, innovation, customer satisfaction, and teamwork. We believe in putting our customers first and working together to achieve our goals. Feel free to explore our website to learn more about what we offer!</p>
+                </div>
+
+                <div class="our-team">
+                    <h1>Our Team</h1>
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <div class="avatar-wrapper">
+                                <svg class="avatar-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="8" r="4"></circle>
+                                    <path d="M12 14c-6.1 0-8 4-8 4v2h16v-2s-1.9-4-8-4z"></path>
+                                </svg>
+                            </div>
+                            <h3>John Doe</h3>
+                            <p>John is responsible for overall company strategy and vision.</p>
+                            <span class="role-badge">CEO</span>
+                        </div>
+                        <div class="team-card">
+                            <div class="avatar-wrapper">
+                                <svg class="avatar-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="8" r="4"></circle>
+                                    <path d="M12 14c-6.1 0-8 4-8 4v2h16v-2s-1.9-4-8-4z"></path>
+                                </svg>
+                            </div>
+                            <h3>Celina Thomas</h3>
+                            <p>Celina leads the technical and operations team.</p>
+                            <span class="role-badge">Team Lead</span>
+                        </div>
+                        <div class="team-card">
+                            <div class="avatar-wrapper">
+                                <svg class="avatar-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="8" r="4"></circle>
+                                    <path d="M12 14c-6.1 0-8 4-8 4v2h16v-2s-1.9-4-8-4z"></path>
+                                </svg>
+                            </div>
+                            <h3>Mike Tyson</h3>
+                            <p>Mike manages project delivery and client relationships.</p>
+                            <span class="role-badge">Delivery Head</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Us Section -->
+            <div id="section-contact" class="main-section hidden">
+                <div class="contact">
+                    <div class="contact-info">
+                        <h1>CONTACT US</h1>
+                        <p class="subtitle">Get in touch</p>
+                    </div>
+                    <div class="contact-form-container">
+                        <form id="contact-form" onsubmit="event.preventDefault(); alert('Thank you for contacting us! We will get back to you soon.'); this.reset();">
+                            <div class="form-group">
+                                <label for="form-name">Name</label>
+                                <input type="text" id="form-name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email</label>
+                                <input type="email" id="form-email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" cols="30" rows="6" placeholder="Enter your message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search Results Section -->
+            <div id="section-results" class="main-section hidden">
+                <h1 class="results-title">Search Results</h1>
+                <div id="search-results-grid" class="results-grid"></div>
+            </div>
         </div>
-        <div>
-            <form action="">
-             <label for="name">Name</label>
-             <input type="text" name="name" id="">
-             <label for="email">Email</label>
-             <input type="email" name="email" id="">
-             <label for="message">Message</label>
-             <textarea name="message" id="" cols="30" rows="10"></textarea>
-             <button>Submit</button>
-            </form>
-        </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>TravelBloom</h3>
+                <p>Explore the world's most beautiful destinations and make memories that last a lifetime.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#" id="footer-home">Home</a></li>
+                    <li><a href="#" id="footer-about">About Us</a></li>
+                    <li><a href="#" id="footer-contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get travel tips and exclusive recommendation updates!</p>
+                <form id="newsletter-form" class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TravelBloom. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="travel_recommendation.js"></script>
 </body>
+
 </html>
